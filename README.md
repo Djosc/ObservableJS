@@ -4,16 +4,17 @@ A JavaScript framework with built-in observability for monitoring application pe
 
 ## Overview
 
-ObservableJS is a reactive framework that automatically tracks performance metrics without requiring developers to add instrumentation code. It helps identify bottlenecks, performance issues, and inefficient patterns in real-time.
+ObservableJS is a reactive framework that automatically tracks performance metrics without requiring developers to add instrumentation code. It helps identify bottlenecks, performance issues, and inefficient patterns in real-time, making it easier to optimize your application.
 
-## Key Features
+## Features
 
-- **Built-in Observability**: Performance tracking happens automatically
+- **Zero-Configuration Monitoring**: Get detailed performance metrics without writing any instrumentation code
+- **Reactive State Management**: Observable state and computed values with automatic dependency tracking
+- **Performance Analysis**: Automatic detection of hotspots, bottlenecks, and inefficient patterns
+- **Component System**: UI components with built-in render time and update frequency tracking
+- **Developer Dashboard**: Visual interface for monitoring performance metrics in real-time
 - **Low Overhead**: Configurable sampling rate to minimize production impact
-- **Reactive Primitives**: Observable state and computed values with dependency tracking
-- **Component System**: UI components with automatic render time tracking
-- **Performance Analysis**: Automatic detection of hotspots and bottlenecks
-- **External Integrations**: Export metrics to tools like Prometheus and Grafana
+- **External Integrations**: Export metrics to Prometheus, Grafana, and other monitoring tools
 
 ## Installation
 
@@ -29,7 +30,22 @@ npm install
 npm run build
 ```
 
+## Project Structure
+
+```
+observablejs/
+├── packages/
+│   ├── core/          # Reactive system with observability
+│   ├── components/    # UI component system with performance tracking
+│   ├── devtools/      # Visualization and analysis tools
+│   └── examples/      # Demo applications
+├── scripts/           # Development utilities
+└── docs/              # Documentation (coming soon)
+```
+
 ## Basic Usage
+
+### Reactive State
 
 ```javascript
 import { createObservable, computed, startMonitoring } from 'observablejs';
@@ -56,11 +72,11 @@ multiplier.value = 3; // Logs: The doubled value is now: 15
 // Get performance metrics
 import { getMetrics, findHotspots } from 'observablejs';
 
-console.log(getMetrics());
-console.log(findHotspots());
+console.log(getMetrics()); // View all collected metrics
+console.log(findHotspots()); // Identify performance issues
 ```
 
-## Component Example
+### UI Components
 
 ```javascript
 import { Component, mount } from 'observablejs/components';
@@ -106,9 +122,7 @@ const counter = new CounterComponent();
 mount(counter, '#app');
 ```
 
-## Performance Dashboard
-
-ObservableJS includes a performance dashboard that visualizes metrics in real-time:
+### Performance Dashboard
 
 ```javascript
 import { createDashboard } from 'observablejs/devtools';
@@ -124,29 +138,48 @@ dashboard.open();
 import { configure } from 'observablejs';
 
 configure({
-  // Detailed mode includes stack traces and more metrics
+  // Enable detailed mode in development
   isDetailedMode: process.env.NODE_ENV !== 'production',
   
   // Sample only 10% of operations in production for lower overhead
   samplingRate: process.env.NODE_ENV === 'production' ? 0.1 : 1,
   
   // Maximum history items to keep
-  maxHistoryItems: 1000
+  maxHistoryItems: 1000,
+  
+  // Maximum performance issues to track
+  maxIssues: 100,
+  
+  // Maximum errors to track
+  maxErrors: 50
 });
 ```
 
-## Project Structure
+## Running Examples
 
+```bash
+# Start the example application
+npm run start:examples
 ```
-observablejs/
-├── packages/
-│   ├── core/ (reactive system)
-│   ├── components/ (UI layer)
-│   ├── devtools/ (visualization of metrics)
-│   └── examples/ (demo apps)
-├── docs/
-└── tests/
+
+This will open a browser window with a counter example that demonstrates the core features of ObservableJS.
+
+## Development
+
+```bash
+# Run development server
+npm run dev
+
+# Run tests
+npm run test
+
+# Lint code
+npm run lint
 ```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
