@@ -4,13 +4,142 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ObservableJS Examples</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>ObservableJS Examples</h1>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <div class="logo-icon">
+          <div class="iris">
+            <div class="iris-center"></div>
+            <div class="iris-ring iris-ring-1"></div>
+            <div class="iris-ring iris-ring-2"></div>
+            <div class="iris-ring iris-ring-3"></div>
+            <div class="iris-rays">
+              <!-- Generated rays -->
+              <div class="iris-ray" style="width: 40px; transform: rotate(0deg) translateX(0)"></div>
+              <div class="iris-ray" style="width: 36px; transform: rotate(30deg) translateX(0)"></div>
+              <div class="iris-ray" style="width: 40px; transform: rotate(60deg) translateX(0)"></div>
+              <div class="iris-ray" style="width: 36px; transform: rotate(90deg) translateX(0)"></div>
+              <div class="iris-ray" style="width: 40px; transform: rotate(120deg) translateX(0)"></div>
+              <div class="iris-ray" style="width: 36px; transform: rotate(150deg) translateX(0)"></div>
+              <div class="iris-ray" style="width: 40px; transform: rotate(180deg) translateX(0)"></div>
+              <div class="iris-ray" style="width: 36px; transform: rotate(210deg) translateX(0)"></div>
+              <div class="iris-ray" style="width: 40px; transform: rotate(240deg) translateX(0)"></div>
+              <div class="iris-ray" style="width: 36px; transform: rotate(270deg) translateX(0)"></div>
+              <div class="iris-ray" style="width: 40px; transform: rotate(300deg) translateX(0)"></div>
+              <div class="iris-ray" style="width: 36px; transform: rotate(330deg) translateX(0)"></div>
+            </div>
+          </div>
+        </div>
+        <div class="logo-text">ObservableJS</div>
+      </div>
+      <p class="tagline">A JavaScript framework with built-in observability for monitoring application performance</p>
+    </div>
+  </header>
   
-  <ul>
-    <li><a href="./counter/index.html">Counter Example</a></li>
-    <!-- Add more examples here as they're created -->
-  </ul>
+  <main>
+    <h2 class="section-title">Examples</h2>
+    
+    <div class="examples-container">
+      <div class="example-card">
+        <div class="card-header">
+          <h3 class="card-title">Counter</h3>
+          <p class="card-description">A simple counter application demonstrating reactive state</p>
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 6V12L16 14M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="feature-list">
+            <li>Observable state management</li>
+            <li>Computed values with dependency tracking</li>
+            <li>Performance metrics visualization</li>
+            <li>Component-based UI with automatic tracking</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <a href="./counter/index.html" class="btn">View Example</a>
+        </div>
+      </div>
+      
+      <div class="example-card">
+        <div class="card-header">
+          <h3 class="card-title">Todo List</h3>
+          <p class="card-description">A todo application showcasing component composition</p>
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5M12 12H15M12 16H15M9 12H9.01M9 16H9.01" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="feature-list">
+            <li>Array-based observable state</li>
+            <li>State filtering and sorting</li>
+            <li>Component event handling</li>
+            <li>Performance optimization examples</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn">Coming Soon</a>
+        </div>
+      </div>
+      
+      <div class="example-card">
+        <div class="card-header">
+          <h3 class="card-title">Dashboard</h3>
+          <p class="card-description">Real-time data visualization with metrics tracking</p>
+          <div class="card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 13V17M16 8V17M12 3V17M3 21H21M3 8L8 13M8 13L13 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="card-body">
+          <ul class="feature-list">
+            <li>Real-time data visualization</li>
+            <li>Complex computed state</li>
+            <li>Optimized rendering strategies</li>
+            <li>Advanced performance monitoring</li>
+          </ul>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn">Coming Soon</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="docs-section">
+      <div class="docs-section-inner">
+        <h2>Getting Started</h2>
+        <p>ObservableJS makes it easy to create reactive applications with built-in performance monitoring. Check out our examples to see it in action!</p>
+        <p>The framework automatically tracks performance metrics without requiring you to add instrumentation code, helping you identify bottlenecks and optimize your application.</p>
+        <p style="margin-top: 1.5rem;">
+          <a href="https://github.com/yourusername/observablejs" class="btn">View on GitHub</a>
+        </p>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="footer-content">
+      <p>ObservableJS - A JavaScript framework with built-in observability</p>
+      <p>&copy; 2025 ObservableJS. Released under the MIT License.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Add animation for rays
+    document.addEventListener('DOMContentLoaded', function() {
+      const rays = document.querySelectorAll('.iris-ray');
+      rays.forEach((ray, index) => {
+        ray.style.animation = `pulse ${3 + (index % 3)}s infinite ${index * 0.2}s`;
+      });
+    });
+  </script>
 </body>
 </html>

@@ -6,7 +6,7 @@
  */
 
 // Import the central observability system
-import { ObservabilitySystem } from './observability.ts';
+import { ObservabilitySystem } from './observability.js';
 
 class Observable {
   /**
