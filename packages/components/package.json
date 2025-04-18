@@ -1,0 +1,32 @@
+{
+    "name": "@observablejs/components",
+    "version": "0.1.0",
+    "description": "UI components with built-in performance tracking",
+    "type": "module",
+    "main": "dist/index.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "files": [
+      "dist"
+    ],
+    "scripts": {
+      "build": "echo \"Using direct file linking instead of building with Rollup.\"",
+      "test": "echo \"No tests yet\"",
+      "lint": "eslint src/**/*.js"
+    },
+    "keywords": [
+      "javascript",
+      "components",
+      "ui",
+      "performance"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+      "@observablejs/core": "^0.1.0"
+    },
+    "devDependencies": {
+      "@rollup/plugin-node-resolve": "^15.0.0",
+      "rollup": "^3.0.0"
+    }
+  }

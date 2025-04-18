@@ -1,0 +1,21 @@
+{
+    "name": "@observablejs/examples",
+    "version": "1.0.0",
+    "description": "Examples for ObservableJS",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "start": "vite",
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
+    },
+    "dependencies": {
+      "@observablejs/core": "^0.1.0",
+      "@observablejs/components": "^0.1.0",
+      "@observablejs/devtools": "^0.1.0"
+    },
+    "devDependencies": {
+      "vite": "^5.0.0"
+    }
+  }
