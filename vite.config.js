@@ -1,7 +1,7 @@
 // vite.config.js in project root
 export default {
     server: {
-      port: 4000,
+      port: 3000,
       open: true
     },
     optimizeDeps: {
